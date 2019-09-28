@@ -1,0 +1,12 @@
+---
+title: "readme"
+author: "Elliot Pickens"
+date: "September 28, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Carleton Data Science Club's Fall Repo!
