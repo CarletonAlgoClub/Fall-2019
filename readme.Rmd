@@ -7,6 +7,34 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(MASS)
+
+library(tidyverse)
 ```
 
 ## Carleton Data Science Club's Fall Repo!
+
+```{r}
+boston <- as.data.frame(Boston)
+
+boston %>% 
+  ggplot(aes(rm, medv)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+basic.model <- lm(data = boston, medv ~ rm)
+
+summary(basic.model)
+
+boston %>% 
+  ggplot(aes(crim)) +
+  geom_density() 
+
+boston %>% 
+  ggplot(aes(log(crim))) +
+  geom_density() 
+
+```
+
+
+
