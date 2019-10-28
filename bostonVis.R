@@ -3,6 +3,8 @@ library(tidyverse)
 
 boston <- as.data.frame(Boston)
 
+summary(boston)
+
 boston %>% 
   ggplot(aes(rm, medv, color=crim, size=crim)) +
   geom_point() +
